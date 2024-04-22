@@ -1,0 +1,97 @@
+<div class="second-nav">
+    <a href="/give-hope" target="_blank">
+        <img src="https://images.squarespace-cdn.com/content/65c510001587f859d3883328/d2a549c2-ebcf-4349-9a15-9b11bbe87058/GH-logo-black-horizontal.png" alt="GH Logo" class="nav-logo">
+    </a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-items" id="navItems">
+        <a href="/about-give-hope" class="nav-link">About</a>
+        <a href="/give-hope-partners" class="nav-link">Partners</a>
+        <a href="/give-hope-updates" class="nav-link">Updates</a>
+        <a href="***" class="nav-link">Give</a>
+    </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var x = document.getElementById("navItems");
+    if (x.style.display === "flex") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "flex";
+    }
+  }
+</script>
+
+<style>
+.second-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 10px 15px 20px;
+  border-radius: 15px;
+  background: transparent;
+}
+
+.nav-logo {
+    height: 50px;
+  padding-top:5px;
+  overflow: visible;
+}
+
+.nav-items {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    font-size: 17px;
+      padding: 7px 14px;
+    letter-spacing: 1px;
+    transition: all ease-in-out 0.2s;
+  font-weight: 300;
+  font-family: "Gotham Ultra";
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+    background: #40d3c8;
+    border-radius: 50px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    align-self: center;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1015px) {
+.second-nav {
+    background: #00000077;
+}
+  
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+  .nav-logo {
+    height: 35px;}
+  .nav-link {
+    padding: 0;
+  }
+  }
+</style>
