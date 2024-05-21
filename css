@@ -1,3 +1,38 @@
+/* Colors */
+:root {  
+--darkest-color: #373A36;  
+--dark-color: #929391;  
+--medium-color: #CBD654;  
+--light-color: #f5f5f5;  
+--lightest-color: #ffffff;
+}
+
+/*Give Hope Pop Up*/
+.sqs-popup-overlay-content ul li a{border-radius: 100px;
+        font-weight: 900;
+        font-family: 'Gotham Ultra';}
+
+.sqs-slide-layer-content {border-radius: 10px; overflow: clip;}
+
+/*give hope carousel adjust first image on mobile*/ @media only screen and (max-width: 767px) { section[data-section-id="660c9305b0d385733932f04c"] li:nth-of-type(1) {
+  background-image: url(https://images.squarespace-cdn.com/content/65c510001587f859d3883328/9919b308-e9e0-4b19-8a6d-4200d282dce4/20230405-KENAIKIA-Library-015.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: clip;
+  border-radius: 20px;
+  }
+section[data-section-id="660c9305b0d385733932f04c"] li:nth-child(1) div.slide-media-container img {
+opacity: 0 !important;
+  }
+  }
+
+section[data-section-id="661053bc07982365f44b6199"] {
+    .sqs-button-element--primary, .sqs-button-element--secondary, .sqs-button-element--tertiary {
+    padding: 20px 32px !important;
+  }
+}
+
 /*SUMMARY BLOCK START*/
 .customFiltersContainer {
   font-family: 'Gotham Book';
@@ -71,6 +106,10 @@ section[data-section-id="65e77b4b97a6a36a200cfb84"] {
 .summary-read-more-link:hover {
   opacity: 75%;
 }
+
+
+
+
 div.sqs-gallery {
   margin-bottom: 0 !important;
 }
@@ -78,58 +117,45 @@ div.sqs-gallery {
 }
 /*SUMMARY BLOCK END*/
 
-/* Colors */
-:root {  
---darkest-color: #373A36;  
---dark-color: #929391;  
---medium-color: #CBD654;  
---light-color: #f5f5f5;  
---lightest-color: #ffffff;
+
+// Auto Banner Slideshow - Rounded Images //
+
+.user-items-list-banner-slideshow .slides img {
+  border-radius: 20px !important;
+}
+// Auto Banner Slideshow - Card Style //
+
+.user-items-list-banner-slideshow .slide-content {
+  border-radius: 20px;
+  border: 1px solid #eee;
+  background: #fff !important;
 }
 
-/* Our Staff logo clickable */
+/*Remove Squarespace Code Block Notices for Sizing*/
+html.squarespace-damask .sqs-blockStatus, html.squarespace-damask .sqs-blockStatus, .sqs-block .removed-script {
+    display: none !important;
+}
+
+
+/* Our Staff Email */
 body#collection-65c698a8a7a3934c93c83c26 {
-li.list-item {
-    position: relative !important;
-}
-.list-item-content__button-container {
-    position: absolute !important;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-a.list-item-content__button.sqs-block-button-element {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 100%;
-    z-index: 9999;
-    color: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-}
-  
-li.list-item .user-items-list-carousel__media-inner::after {
-      content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://static1.squarespace.com/static/65c510001587f859d3883328/t/65f89689de116c0dc46b55a6/1710790281224/EmailOverlay+%281%29.png');
-      background-size: cover;
-  background-position: center;
-  pointer-events: none;
-  overflow: clip;
-  border-radius: 10px;
-opacity: 0;
-  transition: opacity 250ms;
+ div.user-items-list-carousel__gutter .sqs-block-button-element::after {
+content: '';
+  display: inline-block;
+  background-size: contain !important;
+background-repeat: no-repeat !important;
+  background-position: center !important;
+  background: url("https://static1.squarespace.com/static/65c510001587f859d3883328/t/65e919fe20a0a93567fb4c21/1710811719915/2357-emailicon-white+%281%29.png");
+  width: 20px !important;
+  height: 18px !important;
+     }
+
+  div.user-items-list-carousel__media-container div img {
+    border-radius: 10px;
   }
-  
-   li.list-item:hover .user-items-list-carousel__media-inner::after {
-  opacity: 1;
+
+div.user-items-list-carousel__gutter  .sqs-button-element--primary {
+  padding: 9px 9px 8px 9px;
 }
   //Mobile Columns
   @media (max-width: 767px) {
@@ -487,4 +513,22 @@ html .c-lightbox__toolbar .c-lightbox__button:last-child {
 /* Nav Items */
 .header-nav-item {
   font-size: 1rem;
+}
+
+
+#block-yui_3_17_2_1_1712336248065_57334.video-block > .sqs-block-content,
+#block-yui_3_17_2_1_1712336248065_57334.video-block .intrinsic,
+#block-yui_3_17_2_1_1712336248065_57334.video-block .embed-block-wrapper,
+#block-yui_3_17_2_1_1712336248065_57334.video-block .sqs-native-video {
+  height: 100%;
+}
+
+#block-yui_3_17_2_1_1712336248065_57334.video-block .video-player {
+  padding: 0;
+    border-radius: 15px;
+  overflow: clip;
+}
+
+#block-yui_3_17_2_1_1712336248065_57334.video-block video {
+  object-fit: cover;
 }
