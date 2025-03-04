@@ -7,6 +7,74 @@
 --lightest-color: #ffffff;
 }
 
+/*Border Radius Simple List*/
+.user-items-list-simple li {
+  border-radius: 10px;
+}
+
+/*Secondary Nav*/
+#wm-subnav .wm-dropdown-list-icon svg path {
+  stroke: white;
+  stroke-width: 8px;
+}
+
+#wm-subnav .wm-secondary-dropdown-list-container {
+  max-height: 300px !important;
+  width: 95%;
+  left: 2.5%;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 767px) {
+#wm-subnav :not(.header--menu-open) .header-nav-wrapper a {
+  font-size: large;
+  padding: 5px;
+  transition: 350ms;
+}
+
+#wm-subnav :not(.header--menu-open) .header-nav-wrapper a:hover {
+  color: var(--medium-color);
+  }}
+
+#wm-subnav .wm-secondary-dropdown-list-container {
+  background-color: #373A36dd;
+}
+
+#wm-subnav .wm-dropdown-list-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+ #wm-subnav, .wm-secondary-mobile-nav{
+    display:none;
+  }
+#wm-subnav .wm-secondary-sticky-wrapper{
+ background-color: transparent;
+}
+.header-nav-item.wm-subnav-item:nth-of-type(4) {
+  padding:.3em 1.2em;
+  background: #2DBDB7;
+  transition: 450ms;
+  font-size: 16px;
+  border-radius: 100px;
+  opacity: 100%;
+}
+.header-nav-item.wm-subnav-item:nth-of-type(4) a {
+  font-family: 'Gotham Ultra' !important;
+  text-transform: uppercase;
+  font-weight: 900 !important;
+  letter-spacing: 1px;
+  color: var(--darkest-color) !important;
+}
+
+.header-nav-item.wm-subnav-item:hover {
+  opacity: .8;
+}
+
+#wm-subnav .second-nav-img {
+  max-height: 45px;
+  overflow: visible;
+}
+
 /*Give Hope Pop Up*/
 .sqs-popup-overlay-content ul li a{border-radius: 100px;
         font-weight: 900;
@@ -47,7 +115,7 @@ section[data-section-id="661053bc07982365f44b6199"] {
   border-color: var(--medium-color) !important;
 }
 
-section[data-section-id="65e77b4b97a6a36a200cfb84"] {
+section[data-section-id="65e77b4b97a6a36a200cfb84"], section[data-section-id="67bd0e5c3cff0b559f0a40bf"] {
 .customFiltersWrapper .clearAllBtn {
   border-radius: 100px;
   background: var(--medium-color) !important;
@@ -515,7 +583,7 @@ html .c-lightbox__toolbar .c-lightbox__button:last-child {
   font-size: 1rem;
 }
 
-
+/*Video Fill Block - Give Hope Page*/
 #block-yui_3_17_2_1_1712336248065_57334.video-block > .sqs-block-content,
 #block-yui_3_17_2_1_1712336248065_57334.video-block .intrinsic,
 #block-yui_3_17_2_1_1712336248065_57334.video-block .embed-block-wrapper,
@@ -531,4 +599,34 @@ html .c-lightbox__toolbar .c-lightbox__button:last-child {
 
 #block-yui_3_17_2_1_1712336248065_57334.video-block video {
   object-fit: cover;
+}
+
+
+/* 2024 Christmas Page */
+section[data-section-id="671fe049c90dce7b3a63a377"].page-section.background-width--inset .section-border {
+    background-color: #751917 !important;
+  }
+
+#block-yui_3_17_2_1_1730763049254_105509 img {
+  border-radius: 0px;
+}
+
+/* Give Hope Footer Styling */
+#block-yui_3_17_2_1_1740438523622_31709 a {
+  text-decoration: none !important;
+}
+
+@media (max-width: 600px) {
+  #block-yui_3_17_2_1_1740438523622_31709 p {
+  text-align: center !important;
+}
+}
+
+/* Sermon Recap */
+.blog-item-meta-wrapper .blog-item-category {
+  color: green;
+  font-weight: 900 !important;
+}
+.blog-item-meta-wrapper .blog-meta-item--date span {
+  font-weight: 400 !important;
 }
