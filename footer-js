@@ -1,0 +1,50 @@
+<!-- Display Church -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var selectors = document.querySelectorAll('.dce-groups--filters--selector, .calendar-filters--options_selected');
+
+    selectors.forEach(function(selector) {
+        // Append the arrow icon to each selector
+        let arrow = document.createElement('span');
+        arrow.classList.add('arrow-icon');
+        arrow.textContent = '▼';  // Start with the down arrow
+        selector.appendChild(arrow);
+
+        selector.addEventListener('click', function() {
+            if (this.classList.contains('clicked')) {
+                this.classList.remove('clicked');
+                arrow.textContent = '▼';  // Down arrow
+            } else {
+                this.classList.add('clicked');
+                arrow.textContent = '▲';  // Up arrow
+            }
+        });
+    });
+});
+</script>
+
+<!-- Secondary Nav -->
+<script src="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/secondaryNav@2/javascript.min.js"></script>
+
+<!-- Lazy Summaries -->
+<script src="https://assets.squarewebsites.org/lazy-summaries/lazy-summaries.min.js"></script>
+<script>
+!function(){window.self===window.top||window.top.document.getElementById("lazy-summaries-admin")||function(e,t,s,i,a){if(s.querySelector("#"+t))i&&i(this);else{var n=document.createElement("script");n.src=e+"?cache="+((new Date).getTime()+"").substr(0,8),n.id=t,n.onload=function(){a&&this.remove(),i&&i(this)},s.appendChild(n)}}("https://assets.squarewebsites.org/lazy-summaries/lazy-summaries-admin.js","lazy-summaries-admin",window.top.document.getElementsByTagName("head")[0])}();
+</script>
+
+<!-- Plugin Lightbox -->
+<link href="/s/plugin-lightbox.css" rel="stylesheet">
+<script src="/s/plugin-lightbox.js"></script>
+<script>pluginLightbox();</script>
+<!-- end Plugin Lightbox -->
+
+<!---MOBILE DROPDOWN PLUGIN SCHWARTZ --->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--- MOBILE MIN --->
+<script>$(window).on('load',function(){
+   var closeOnOpen = true;
+$('.header-menu-nav').addClass('loaded dropdown');
+$('.header-menu-nav-item a[data-folder-id], .language-picker-mobile > a[data-folder-id]').each(function(){var folderId=$(this).attr('data-folder-id');$(this).after($('[data-folder="'+folderId+'"]'));$(this).nextUntil(".header-menu-nav-item").hide();
+$(this).click(function(){event.preventDefault();event.stopPropagation();if(closeOnOpen === true){$(".header-menu-nav-item a, .language-picker-mobile > a").not(this).nextUntil(".header-menu-nav-item").slideUp();$(".header-menu-nav-item a, .language-picker-mobile > a").not(this).removeClass('is-open');}$(this).toggleClass('is-open');$(this).nextUntil(".header-menu-nav-item").slideToggle()})})})</script> 
+<script>window.addEventListener("load",function(){var e=document.querySelectorAll(".header-menu-nav-folder-content a"),t=document.querySelectorAll("[data-folder-id]"),a={attributes:!0,attributeOldValue:!0,attributeFilter:["class"]},n=new MutationObserver(function(e){e.forEach(e=>{e.target.classList.contains("is-open")&&r()})});t.forEach(e=>{n.observe(e,a)});var r=function(){e.forEach(e=>e.tabIndex="0")}});</script>
+<!--- end MOBILE DROPDOWN PLUGIN SCHWARTZ --->
